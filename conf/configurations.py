@@ -1,7 +1,10 @@
 __author__ = 'tmkasun'
 import json
 
-with open('/Users/tmkasun/Documents/uni/Level4_Semester2/IN 4410 - Big Data Analytics/labs/bigdata_project/spark/conf/datapackage.json', 'r') as data_schema:
+# TODO: remove absolute path
+with open(
+        '/Users/tmkasun/Documents/uni/Level4_Semester2/IN 4410 - Big Data Analytics/labs/bigdata_project/spark/conf/datapackage.json',
+        'r') as data_schema:
     json_schema = json.load(data_schema)
     schema = json_schema['resources'][0]['schema']['fields']
 
