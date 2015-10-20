@@ -9,6 +9,12 @@ There are some columns with values that has comma within the value, which ‘Spa
 	The preprocessing were done using multiple Mapreduce passes with the most efficient way to do most number of operations within one pass. The unique way Spark functions once the process of one request is done it doesn’t write the data back to the distributed file system which enables to continue with the preprocessing one after the other until the final necessary data set is derived. 
 	
 ##Clustering
+
+<img width="1280" alt="screen shot 2015-10-15 at 12 45 29 pm" src="https://cloud.githubusercontent.com/assets/3313885/10598948/77e2f55e-771b-11e5-86f2-f22ffc0b6fc6.png">
+<img width="1280" alt="screen shot 2015-10-15 at 12 46 08 pm" src="https://cloud.githubusercontent.com/assets/3313885/10598945/7688795e-771b-11e5-88df-3c6d92e7f43c.png">
+<img width="1280" alt="screen shot 2015-10-15 at 12 46 00 pm" src="https://cloud.githubusercontent.com/assets/3313885/10598946/7688e542-771b-11e5-986c-cd4bb9eee0fb.png">
+
+
 The clustering generally happens based on the two dimensions we assigned. To reduce the complexity and the dimensions we have created the combined metric which is associated with the engine. The values related to the engine are multiplies which includes the running costs and related fuel consumption and emissions. To make the data more sensible and fair the combined multiplies values are divided by the engine capacity so that the values which naturally increase with the engine size is normalized per engine capacity unit. This makes the analysis very sensible. The other dimension of the clustering is the safety rating which comes from the Euro standards which means it should comply and pass the expected standards in various safety aspect both physically and technologically. This includes multi directional collision test, pedestrian safety, number of airbags effectiveness of crumple zones and so on. So the cluster gives a very sensible information when we consider the lowest combined matrix against the highest safety rating. 
 The number of cluster points were decided based on the number of data we have which is around 45000 which divided into 5 clusters would give around 9000 results per cluster. Given the number of manufacturers available this number per cluster would give a us a fair value to create the result we need.
 
