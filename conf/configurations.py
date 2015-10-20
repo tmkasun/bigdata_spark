@@ -9,7 +9,7 @@ with open(
     schema = json_schema['resources'][0]['schema']['fields']
 
 project = {
-    'data_file': "./automobile_data.csv",
-    'sample_data_file': "./sample_data.csv",
+    'data_file': "data/automobile_data.csv",
+    'sample_data_file': "data/sample_data.csv",
     'schema': schema
 }
